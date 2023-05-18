@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 04 - Acordeones</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+	
+	<h1>Lección 04: Acordeones</h1>
+	<hr>
+	<div align="center">
+		<dl>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+			<dt>Titulo del acordeon</dt>
+			<dd>Este es el detalle del acordeon</dd>
+		</dl>
+	</div>
+</div>
+
+<script>
+	//Funcion anonima
+	(function(){
+		var dds = $('dd');
+		dds.hide();	//Oculta elementos seleccionados
+		$('dt').on('mouseenter',function(){
+			dds.slideUp(200);	//Anima el ocultamiento gradual de los elementos deslizandolos hacia arriba en 200 milisegundos
+			$(this)
+				.next()
+				.slideDown(200);	//Anima la aparicion gradual de elementos ocultos mediante un efecto de deslizamiento hacia abajo
+		});		
+	})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 01 - Bootstrap</title>
+    <!--Importacion del jQuery-->
+    <script src="js/jquery.min.js"></script>
+
+    <!--Importacion de Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+        .textoVerde {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+
+        $(function () {
+            $('li:last-child').addClass('textoVerde');
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Leccion 01</h1>
+        <hr>
+        <ul>
+            <li>
+            <li><span class="badge bg-primary">Hola 1</span></li>
+            <li>Hola 2</li>
+            <li>Hola 3</li>
+        </ul>
+
+        <ul>
+            <li>Negrita</li>
+            <li>Negrita</li>
+            <li>Negrita</li>
+        </ul>
+        <table class="table table-striped-columns">
+            <tr>
+                <td>Campo</td>
+                <td>Campo</td>
+                <td>Campo</td>
+                <td>Campo</td>
+                <td>Campo</td>
+            </tr>
+        </table>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <p><a class="link-opacity-50" href="#">Link opacity 50</a></p>
+    </div>
+
+</body>
+
+</html>
